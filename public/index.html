@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Password Meter</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root">
+      <form id='meter'></form>
+      <div id='informational' class="informational_block">
+        <p>
+          <span class='info_header'>About this tool:</span>
+          <br><hr style="height:0.01em; visibility:hidden; margin:0;border:0;margin-bottom:-1px">
+          This tool does not transmit or retain the password entered
+        </p>
+        <p>
+          <span class='info_header'>Tips for creating a strong password:</span><br>
+          <ul class='tips'>
+            <li>Use passphrases; which are easier for humans to remember but harder for computers to guess</li>
+            <li>Length is more important than complexity</li>
+            <li>Avoid easily guessed phrases related to ACME, family, pets, birthdays, etc.</li>
+            <li>Avoid reusing passwords or repeating words or characters</li>
+          </ul>
+        </p>
+        <p>
+          <hr style="height:0.75em; visibility:hidden; margin:0;border:0;margin-bottom:-1px">
+          See the Security Awareness site for more password tips and tricks
+          <span class="sponsorship">Brought to you by ACME Information Security</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

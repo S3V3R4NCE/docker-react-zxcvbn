@@ -1,0 +1,30 @@
+version: '3.2'
+
+services:
+
+  react-zxcvbn:
+    container_name: react-zxcvbn
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '80:8014'
+      - '443:8015'
+    networks:
+      - docknet
+    environment:
+      - NODE_ENV=production
+
+networks:
+  docknet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 10.254.0.0/16
+
+
+

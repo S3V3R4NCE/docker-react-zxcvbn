@@ -1,0 +1,110 @@
+  html {
+    height: 100%;
+    background-image: url("/illustration.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow: hidden;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+  }
+  
+  body {
+    height: 100%;
+    /*background: linear-gradient(#607D8B, #455A64);*/ 
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  form {
+    margin: 3em auto;
+    max-width: 320px;
+    background: #FFFFFF;
+    padding: 40px;
+    padding-bottom: 56px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .password {
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS';
+    font-weight: 700;
+    width: 100%;
+    color: #727272;
+  }
+  .password__input {
+    display: block;
+    text-transform: none;
+    width: 100%;
+    height: 42px;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: #B6B6B6;
+    font-weight: 400;
+    font-size: 16px;
+    color: #212121;
+  }
+  .password__input:focus, .password__input:active {
+    border-color: #00BCD4;
+    outline: 0;
+  }
+  .password__show {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 11px;
+    height: 16px;
+    background: #727272;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: .8em;
+  }
+  .password__strength {
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    bottom: -8px;
+    background: transparent;
+    transition: all 300ms ease-in-out;
+  }
+  .password__strength[data-score="null"] {
+    width: 0;
+    background: red;
+  }
+  .password__strength[data-score="0"] {
+    width: 20%;
+    background: #F44336;
+  }
+  .password__strength[data-score="1"] {
+    width: 40%;
+    background: #F44336;
+  }
+  .password__strength[data-score="2"] {
+    width: 60%;
+    background: #FF8C00;
+  }
+  .password__strength[data-score="3"] {
+    width: 80%;
+    background: #FFEB3B;
+  }
+  .password__strength[data-score="4"] {
+    width: 100%;
+    background: #4CAF50;
+  }
+  .password__strength__verbal {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -16px;
+    background: transparent;
+    transition: all 300ms ease-in-out;
+    text-align: right;
+    text-transform: none;
+    font-family: 'Avenir', sans-serif;
+    font-weight: normal;
+    font-size: 80%;
+  }
